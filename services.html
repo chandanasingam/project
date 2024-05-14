@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Events - Services</title>
+    <style>
+        /* Basic styling, you can customize this further */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffc0cb; /* Pink background color */
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background-color: #fff; /* White background color for cards */
+            border: 2px solid #ffc0cb; /* Pink border */
+            border-radius: 15px; /* Adjust border radius to make curved edges */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+            width: 48%; /* Adjust card width for two cards to fit side by side */
+            cursor: pointer; /* Change cursor to pointer when hovering over the card */
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            margin-top: 0;
+            color: #333; /* Black text color for headings */
+        }
+        h1 {
+            text-align: center;
+            color: #fff; /* White text color for heading */
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none; /* Hide the cost and description by default */
+        }
+        /* Style for the marquee box */
+        .marquee-box {
+            border: 2px solid red; /* Red border */
+            padding: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            width: 80%; /* Adjust width as needed */
+            margin: 0 auto;
+        }
+        /* Style for the marquee text */
+        .marquee-text {
+            color: white; /* White text color */
+        }
+        .home-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Our Company Provided Services</h1>
+
+<div class="marquee-box">
+    <marquee class="marquee-text">Discounts available! Limited time offer: Get 10% off on all services. Contact us now!</marquee>
+</div>
+
+<div class="container">
+    <div class="card" onclick="showDetails('wedding')">
+        <img src="wedding.jpg" alt="Wedding Planning">
+        <div class="card-content">
+            <h3>Wedding Planning</h3>
+            <div id="weddingDetails" class="hidden">
+                <p>Cost: ₹50,000 onwards</p>
+                <p>Description: Our wedding planning service ensures your special day is meticulously organized and tailored to your dreams. From venue selection to decor and catering, we handle every detail to make your wedding unforgettable.</p>
+            </div>
+        </div>
+    </div>
+<div class="card" onclick="showDetails('corporate')">
+        <img src="corporate.jpg" alt="Corporate Events">
+        <div class="card-content">
+            <h3>Corporate Events</h3>
+            <div id="corporateDetails" class="hidden">
+                <p>Cost: ₹1,00,000 onwards</p>
+                <p>Description: From product launches to corporate retreats, our corporate event planning service ensures seamless execution and professional management to impress your clients and employees alike.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="showDetails('birthday')">
+        <img src="bd.jpg" alt="Birthday Parties">
+        <div class="card-content">
+            <h3>Birthday Parties</h3>
+            <div id="birthdayDetails" class="hidden">
+                <p>Cost: ₹20,000 onwards</p>
+                <p>Description: Celebrate your birthday in style! Our birthday party planning service offers a range of themes, decorations, and entertainment options to make your special day memorable.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="showDetails('anniversary')">
+        <img src="anni.jpg" alt="Anniversary Celebrations">
+        <div class="card-content">
+            <h3>Anniversary Celebrations</h3>
+            <div id="anniversaryDetails" class="hidden">
+                <p>Cost: ₹40,000 onwards</p>
+                <p>Description: Commemorate your love and commitment with our anniversary celebration planning service. Whether it's a romantic dinner or a lavish party, we'll make your anniversary unforgettable.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="showDetails('housewarming')">
+        <img src="house.jpg" alt="Housewarming Parties">
+        <div class="card-content">
+            <h3>Housewarming Parties</h3>
+            <div id="housewarmingDetails" class="hidden">
+                <p>Cost: ₹25,000 onwards</p>
+                <p>Description: Welcome friends and family to your new home with our housewarming party planning service. From invitations to house decorations, we'll ensure your housewarming party is a hit!</p>
+            </div>
+        </div>
+    </div>
+    <div class="card" onclick="showDetails('holiday')">
+        <img src="holiday.jpg" alt="Holiday Gatherings">
+        <div class="card-content">
+            <h3>Holiday Gatherings</h3>
+            <div id="holidayDetails" class="hidden">
+                <p>Cost: ₹30,000 onwards</p>
+                <p>Description: Celebrate the holidays with our holiday gathering planning service. Whether it's Christmas, Diwali, or New Year's, we'll create a festive atmosphere for you and your loved ones.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="home-button">
+    <button onclick="goToHome()">Home</button>
+</div>
+
+<script>
+    function showDetails(service) {
+        var details = document.getElementById(service + 'Details');
+        if (details.style.display === "none") {
+            details.style.display = "block";
+        } else {
+            details.style.display = "none";
+        }
+    }
+
+    function goToHome() {
+        window.location.href = "project.html"; 
+</script>
+
+</body>
+</html>
+
